@@ -16,8 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "pet")
-public class Pet {
+@Table(name = "proprietario")
+public class Proprietario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,13 +26,17 @@ public class Pet {
     @Column(name = "nome", nullable = false, length = 150)
     private String nome;
 
-    @Column(name = "peso", nullable = false)
-    private Double peso;
+    @Column(name = "sexo", nullable = false, length = 1)
+    private String sexo;
 
-    @Column(name = "raca", nullable = false, length = 50)
-    private String raca;
+    @Column(name = "cpf", nullable = false, unique = true, length = 14)
+    private String cpf;
 
-    @Column(name = "proprietario", nullable = false, length = 150)
-    private String proprietario;
+    @Column(name = "email", nullable = false, unique = true, length = 150)
+    private String email;
 
+    @Column(name = "celular", nullable = false, unique = true, length = 15)
+    private String celular;
+    
+    // Getters and setters
 }

@@ -4,6 +4,7 @@
     version="3.0">
     <persistence-unit name="meupet_jpa">
         <class>table.Pet</class>
+        <class>table.Proprietario</class>
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.sqlite.JDBC" />
             <property name="jakarta.persistence.jdbc.url" value="jdbc:sqlite:C:\Users\bubal\vscode-workspace\Faculdade\sqlite\db\meupet_db.db" />
