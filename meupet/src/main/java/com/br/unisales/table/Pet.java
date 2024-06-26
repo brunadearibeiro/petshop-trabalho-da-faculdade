@@ -31,5 +31,8 @@ public class Pet {
 
     @Column(name = "raca", nullable = false, length = 50)
     private String raca;
+
+    @Column(name = "id_proprietario")
+    private Integer idProprietario;
     
 }

@@ -37,12 +37,19 @@ public class PetService {
         }
     }
 
-    public Pet salvar(Integer id, String nome, Double peso, String raca) {
+    public Pet salvar(Integer id, String nome, Double peso, String raca, Integer idProprietario) {
+        Integer idProp = idProprietario;
+        if(id!=null) {
+            Pet petOld = this.buscarPorId(id);
+            idProp = petOld.getIdProprietario();
+        }
+        
         Pet pet = Pet.builder()
                      .id(id)
                      .nome(nome)
                      .peso(peso)
                      .raca(raca)
+                     .idProprietario(idProp)
                      .build();
         this.config.getEntityManager().getTransaction().begin();
         if(id == null) {

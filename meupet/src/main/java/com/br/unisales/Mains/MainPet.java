@@ -35,8 +35,11 @@ public class MainPet {
                     System.out.print("Digite a raça do pet: ");
                     String raca = scanner.nextLine();
 
+                    System.out.println("Digite o id do proprietário: ");
+                    int idProprietario = scanner.nextInt();
+
                     // Salvar o novo pet no banco de dados
-                    servico.salvar(null, nome, peso, raca);
+                    servico.salvar(null, nome, peso, raca, idProprietario);
 
                     System.out.println("Pet cadastrado com sucesso!");
                     break;
@@ -44,7 +47,7 @@ public class MainPet {
                     // Listar todos os pets cadastrados
                     List<Pet> lista = servico.listar();
                     for (Pet item : lista) {
-                        System.out.println("Id: " + item.getId() + " - Nome: " + item.getNome() + " - Peso: " + item.getPeso() + " - Raça: " + item.getRaca());
+                        System.out.println("Id: " + item.getId() + " - Nome: " + item.getNome() + " - Peso: " + item.getPeso() + " - Raça: " + item.getRaca() + item.getIdProprietario());
                     }
                     break;
                 case 3:
@@ -82,7 +85,7 @@ public class MainPet {
                     String novaRaca = scanner.nextLine();
 
                     // Alterar o pet no banco de dados
-                    servico.salvar(idAlterar, novoNome, novoPeso, novaRaca);
+                    servico.salvar(idAlterar, novoNome, novoPeso, novaRaca, null);
 
                     System.out.println("Pet alterado com sucesso!");
                     break;
