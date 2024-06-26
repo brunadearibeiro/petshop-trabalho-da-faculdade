@@ -31,8 +31,5 @@ public class Pet {
 
     @Column(name = "raca", nullable = false, length = 50)
     private String raca;
-
-    @Column(name = "proprietario", nullable = false, length = 150)
-    private String proprietario;
-
+    
 }

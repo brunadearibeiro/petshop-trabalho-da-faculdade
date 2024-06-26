@@ -5,7 +5,6 @@ import java.util.List;
 
 import com.br.unisales.configuration.ConfigurationManager;
 import com.br.unisales.table.Pet;
-import com.br.unisales.table.Proprietario;
 
 import jakarta.persistence.TypedQuery;
 
