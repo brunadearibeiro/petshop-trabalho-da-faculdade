@@ -4,7 +4,6 @@
 
     Pasta meupet: Contém os arquivos principais do projeto.
     Pasta .vscode: Configurações do Visual Studio Code.
-    Arquivo README.md: Instruções e informações sobre o projeto.
 
 ### Estrutura de Arquivos
 
